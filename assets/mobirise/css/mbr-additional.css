@@ -652,37 +652,18 @@ iframe.lazy-placeholder,
 section.lazy-placeholder:after {
   opacity: 0.5;
 }
-.cid-s1kR0wlb67 {
-  background-image: url("../../../assets/images/f2527ebc-ab5f-4e27-a1c9-184a20014afd-1-853x1280.jpeg");
+.cid-s1qbr6TnxI {
+  background-image: url("../../../assets/images/design-sem-nome-13-1920x1281.png");
 }
-.cid-s1kR0wlb67 .card-wrapper {
-  z-index: 3;
+.cid-s1qbr6TnxI .mbr-overlay {
+  background: #879a9f;
 }
-.cid-s1kR0wlb67 .card-wrapper .mbr-section-title {
-  letter-spacing: 1px;
-  transition: all 2.5s cubic-bezier(0, 0.74, 0.52, 1.2);
-}
-.cid-s1kR0wlb67:hover .mbr-section-title {
-  letter-spacing: 10px;
-}
-.cid-s1kR0wlb67 .full-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 0;
-  z-index: 2;
-}
-.cid-s1kR0wlb67 .popup-btn.card-wrapper {
-  z-index: 1 !important;
-}
-.cid-s1kR0wlb67 .text-block {
-  text-align: left !important;
-}
-.cid-s1kR0wlb67 H2 {
+.cid-s1qbr6TnxI .mbr-section-title {
+  letter-spacing: -1px;
   color: #490819;
-  text-align: left;
+}
+.cid-s1qbr6TnxI .mbr-section-subtitle {
+  color: #232323;
 }
 .cid-s1nljw4J7w {
   padding-top: 45px;
@@ -1671,7 +1652,7 @@ section.lazy-placeholder:after {
   display: block !important;
 }
 .cid-s1lKA5ng28 .mbr-gallery-item .sidebar_wraper {
-  background-color: #ffffff;
+  background-color: #dda986;
   padding-left: 15px;
   padding-right: 15px;
 }
