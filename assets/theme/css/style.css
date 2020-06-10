@@ -178,6 +178,7 @@ section .mbr-background-video-preview {
   .mbr-section-btn,
   .mbr-section-title {
     text-align: center;
+    color: white;
   }
 }
 
