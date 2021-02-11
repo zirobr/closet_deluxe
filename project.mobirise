@@ -5,7 +5,7 @@
       "name": "commercem4",
       "title": "CommerceM4",
       "styling": {
-        "primaryColor": "#490819",
+        "primaryColor": "#f2ec07",
         "secondaryColor": "#ca4336",
         "successColor": "#365c9a",
         "infoColor": "#e96188",
@@ -30,6 +30,7 @@
       "titlePreset": "Shoes",
       "nameSelectPreset": "shoes",
       "additionalSetColors": [
+        "#f2ec07",
         "#9a0c58",
         "#9d5d38",
         "#9a8474",
@@ -54,7 +55,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 28,
+    "uniqCompNum": 29,
     "versionPublish": "4.12.3",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -76,66 +77,6 @@
         "html_before": ""
       },
       "components": [
-        {
-          "alias": false,
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            ".mbr-overlay": {
-              "background": "@overlayColor"
-            },
-            ".mbr-section-title": {
-              "letter-spacing": "-1px",
-              "color": "#490819"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#490819"
-            }
-          },
-          "_name": "header5",
-          "_customHTML": "<section class=\"header5\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n         'mbr-fullscreen': fullScreen,\n         'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/design-sem-nome-13-1920x1281.png\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#FFA0A4\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#879a9f\" condition=\"overlay && bg.type !== 'color'\">   \n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n        \n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity}\">\n    </div>\n\n    <div class=\"container align-left\">\n        <div class=\"row justify-content-center mbr-white\">\n                <div class=\"mbr-white col-md-12\">\n                    <h4 class=\"mbr-section-subtitle mbr-fonts-style align-left pb-2\" mbr-if=\"showSubtitle\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-subtitle\"></h4>\n                    <h1 class=\"mbr-section-title mbr-white mbr-fonts-style align-left mbr-bold\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">CLOSET DELUXE</h1>\n                    <p class=\"mbr-text pb-3 mbr-fonts-style mbr-white align-left\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text,.mbr-section-btn\">\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, <br>maxime. Minus, mollitia dolorem corrupti expedita.\n                    </p>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" mbr-class=\"{'pt-3': !showSubtitle}\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\" class=\"mbr-section-btn align-left\"><a class=\"btn btn-lg btn-primary\" data-app-placeholder=\"Type Text\" href=\"https://ziro.app/marcas/closet-deluxe\" target=\"_blank\">CATÁLOGO</a></div>\n                </div>\n            </div>\n        </div>\n    \n    <div mbr-if=\"showArrow && fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
-          "_cid": "s1qbr6TnxI",
-          "_anchor": "header5-p",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#767676"
-            },
-            ".mbr-section-title": {
-              "color": "#ffffff"
-            }
-          },
-          "_name": "info3",
-          "_customHTML": "<section group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#490819\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12 align-center\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-fonts-style pb-2\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Lorem Ipsum Dolor Sit Amet\n                </h3>\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\"><a href=\"https://ziro.app/marcas/closet-deluxe\" target=\"_blank\" class=\"text-white\">ZIRO.APP</a><br><a href=\"https://ziro.app/marcas/closet-deluxe\" target=\"_blank\" class=\"text-white\">20% de desconto à vista nas compras acima de 12 peças</a></h2>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "s1nljw4J7w",
-          "_anchor": "info3-o",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
         {
           "_styles": {
             ".dropdown-item:before": {
@@ -488,7 +429,7 @@
             }
           },
           "_name": "menu3",
-          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"3.8\" max=\"8\" step=\"0.1\" value=\"3.8\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\">\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\">\n        <select title=\"Icons\" name=\"iconsAmount\" condition=\"showIcons\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#000000\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n        <div class=\"navbar-brand\">\n            <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                <a href=\"https://ziro.app/novidades\" target=\"_blank\">\n                    <img src=\"@PROJECT_PATH@/assets/images/social-media-1-164x164.png\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\" title>\n                </a>\n            </span>\n            <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-2\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-black\" data-app-selector=\".navbar-caption\" href=\"index.html\" data-app-placeholder=\"Type Text\">ZIRO.APP</a></span>\n        </div>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n        </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n                    <a class=\"nav-link link text-white\" href=\"https://mobirise.com/extensions/commercem4/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">\n                        Home\n                    </a>\n                </li><li class=\"nav-item\"><a class=\"nav-link link text-white\" href=\"https://mobirise.com/extensions/commercem4/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">\n                        About s</a></li></ul>\n            <div class=\"icons-menu\" mbr-if=\"showIcons\">\n              <div class=\"soc-item\">\n                <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon-twitter socicon\"></span>\n                </a>\n              </div>\n              <div class=\"soc-item\" mbr-if=\"iconsAmount > 1\">\n                <a href=\"https://www.facebook.com/pages/Mobirise/1616226671953247\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon-facebook socicon\"></span>\n                </a>\n              </div>\n              <div class=\"soc-item\" mbr-if=\"iconsAmount > 2\">\n                <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\"></span>\n                </a>\n              </div>\n              <div class=\"soc-item\" mbr-if=\"iconsAmount > 3\">\n                <a href=\"https://mobirise.com\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                </a>\n              </div>\n              <div class=\"soc-item\" mbr-if=\"iconsAmount > 4\">\n                <a href=\"https://mobirise.com\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon socicon-googleplus\"></span>\n                </a>\n              </div>\n              <div class=\"soc-item\" mbr-if=\"iconsAmount > 5\">\n                <a href=\"https://mobirise.com\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon socicon-behance\"></span>\n                </a>\n              </div>\n            </div>\n            <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\">\n                <a class=\"btn btn-sm btn-white\" href=\"https://mobirise.com\">\n                  Get In Touch\n                </a>\n            </div>\n      </div>\n    </nav>\n</section>",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"3.8\" max=\"8\" step=\"0.1\" value=\"3.8\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\">\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\">\n        <select title=\"Icons\" name=\"iconsAmount\" condition=\"showIcons\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#000000\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n        <div class=\"navbar-brand\">\n            <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                <a href=\"https://ziro.app/novidades\" target=\"_blank\">\n                    <img src=\"@PROJECT_PATH@/assets/images/social-media-1-164x164.png\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\" title>\n                </a>\n            </span>\n            <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-2\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-black\" data-app-selector=\".navbar-caption\" href=\"index.html\" data-app-placeholder=\"Type Text\">ZIRO TREND&nbsp;</a></span>\n        </div>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n        </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n                    <a class=\"nav-link link text-white\" href=\"https://mobirise.com/extensions/commercem4/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">\n                        Home\n                    </a>\n                </li><li class=\"nav-item\"><a class=\"nav-link link text-white\" href=\"https://mobirise.com/extensions/commercem4/\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">\n                        About s</a></li></ul>\n            <div class=\"icons-menu\" mbr-if=\"showIcons\">\n              <div class=\"soc-item\">\n                <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon-twitter socicon\"></span>\n                </a>\n              </div>\n              <div class=\"soc-item\" mbr-if=\"iconsAmount > 1\">\n                <a href=\"https://www.facebook.com/pages/Mobirise/1616226671953247\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon-facebook socicon\"></span>\n                </a>\n              </div>\n              <div class=\"soc-item\" mbr-if=\"iconsAmount > 2\">\n                <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\"></span>\n                </a>\n              </div>\n              <div class=\"soc-item\" mbr-if=\"iconsAmount > 3\">\n                <a href=\"https://mobirise.com\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                </a>\n              </div>\n              <div class=\"soc-item\" mbr-if=\"iconsAmount > 4\">\n                <a href=\"https://mobirise.com\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon socicon-googleplus\"></span>\n                </a>\n              </div>\n              <div class=\"soc-item\" mbr-if=\"iconsAmount > 5\">\n                <a href=\"https://mobirise.com\" target=\"_blank\">\n                  <span mbr-icon class=\"mbr-iconfont socicon socicon-behance\"></span>\n                </a>\n              </div>\n            </div>\n            <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\">\n                <a class=\"btn btn-sm btn-white\" href=\"https://mobirise.com\">\n                  Get In Touch\n                </a>\n            </div>\n      </div>\n    </nav>\n</section>",
           "_cid": "qInS0EFrZB",
           "_anchor": "menu3-2",
           "_PHPplaceholders": [],
@@ -513,11 +454,11 @@
               "color": "#767676"
             },
             ".mbr-section-title": {
-              "color": "#490819"
+              "color": "#000000"
             }
           },
           "_name": "info3",
-          "_customHTML": "<section group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12 align-center\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-fonts-style pb-2\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Lorem Ipsum Dolor Sit Amet\n                </h3>\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\"><p>&nbsp;OUTONO INVERNO 2020&nbsp;</p></h2>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12 align-center\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-fonts-style pb-2\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Lorem Ipsum Dolor Sit Amet\n                </h3>\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\"><p>NEWS FEVEREIRO | 20 &nbsp;</p></h2>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "s0TLs6OSIV",
           "_anchor": "info3-c",
           "_protectedParams": [],
@@ -1216,7 +1157,7 @@
             }
           },
           "_name": "shop4",
-          "_customHTML": "<section class=\"mbr-gallery\" group=\"Shops\" plugins=\"mobirise-shop,Gallery\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"3\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"color\" title=\"On Sale Bg\" name=\"saleBg\" value=\"#66458e\">\n        <input type=\"color\" title=\"Card Bottom Color\" name=\"cardBottom\" value=\"#dda986\">\n        <input type=\"color\" title=\"Sidebar Bg\" name=\"sidebarBg\" value=\"#f7f7f7\">\n\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"shop\" title=\"Shop\" name=\"shop\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <!-- <div class=\"big-container\"> -->\n    <div class=\"container\">\n        <div mbr-shop=\"shop\" class=\"mbr-shop\" sorting mbr-shop-minimal></div>\n    </div>\n\n</section>",
+          "_customHTML": "<section class=\"mbr-gallery\" group=\"Shops\" plugins=\"mobirise-shop,Gallery\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"3\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"color\" title=\"On Sale Bg\" name=\"saleBg\" value=\"#66458e\">\n        <input type=\"color\" title=\"Card Bottom Color\" name=\"cardBottom\" value=\"#f2ec07\">\n        <input type=\"color\" title=\"Sidebar Bg\" name=\"sidebarBg\" value=\"#f2ec07\">\n\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"shop\" title=\"Shop\" name=\"shop\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <!-- <div class=\"big-container\"> -->\n    <div class=\"container\">\n        <div mbr-shop=\"shop\" class=\"mbr-shop\" mbr-shop-minimal></div>\n    </div>\n\n</section>",
           "_cid": "s1lKA5ng28",
           "_anchor": "shop4-h",
           "_protectedParams": [
@@ -1244,7 +1185,7 @@
           "_params": {
             "shop__showSidebar": false,
             "shop__reverseSidebar": false,
-            "shop__showSortButtons": true,
+            "shop__showSortButtons": false,
             "shop__showBestSellers": true,
             "shop__showPriceRange": true,
             "shop__showTags": true,
@@ -1264,15 +1205,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "Vestido",
-                "itemDescription": "P,M,G&nbsp;",
+                "itemTitle": "CLOSET DELUXE&nbsp;",
+                "itemDescription": "&nbsp;<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$249,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/3-5-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/3-5-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/1-7-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/1-7-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1287,15 +1228,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "Vestido ML&nbsp;",
-                "itemDescription": "P,M,G&nbsp;<br><br>",
+                "itemTitle": "CLOSET DELUXE&nbsp;",
+                "itemDescription": "<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$239,90&nbsp;",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/2-8-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/2-8-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/2-10-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/2-10-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1310,15 +1251,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "Macacão",
-                "itemDescription": "P,M,G&nbsp;",
+                "itemTitle": "CLOESET DELUXE",
+                "itemDescription": "<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$189,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/6-4-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/6-4-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/3-7-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/3-7-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1333,15 +1274,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "Macacão",
-                "itemDescription": "P,M,G&nbsp;",
+                "itemTitle": "SALGUNAMU&nbsp;",
+                "itemDescription": "<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$169,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/1-6-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/1-6-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/5-5-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/5-5-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1356,268 +1297,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "Vestido Couro Ecológico",
-                "itemDescription": "P,M,G&nbsp;",
+                "itemTitle": "SALGUNAMU&nbsp;",
+                "itemDescription": "<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$159,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/8-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/8-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Macacão&nbsp;",
-                "itemDescription": "P,M,G&nbsp;",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$199,90",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/10-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/10-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Vestido Couro Ecológico&nbsp;",
-                "itemDescription": "<p>P,M,G</p>",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$159,90",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/11-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/11-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Macacão",
-                "itemDescription": "P,M,G&nbsp;",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$159,90",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/13-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/13-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Vestido&nbsp;",
-                "itemDescription": "P,M,G&nbsp;",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$179,90",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/12-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/12-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Tricot",
-                "itemDescription": "U",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$139,90",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/14-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/14-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Tricot&nbsp;",
-                "itemDescription": "M",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$139,90",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/15-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/15-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Vestido&nbsp;",
-                "itemDescription": "P,M,G&nbsp;<br><br>",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$189,90",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/5-3-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/5-3-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "<p>Macacão&nbsp;&nbsp;&nbsp;&nbsp;</p>",
-                "itemDescription": "P,M,G&nbsp;<br><br>",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$199,90&nbsp;",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/9-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/9-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Conjuto Short + Blaser&nbsp;",
-                "itemDescription": "P,M,G&nbsp;<br><br>",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$199,90&nbsp;",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/7-4-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/7-4-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Blusa",
-                "itemDescription": "P,M,G&nbsp;<br><br>",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$119,90",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/4-7-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/4-7-800x1000-800x1000.png",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-4",
-                "customStyleTags": "display-4",
-                "caption": "Digite aqui a legenda",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Impressionante",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Blusa&nbsp;",
-                "itemDescription": "P,M,G&nbsp;<br><br>",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "R$89,90",
-                "oldPriceValue": "$38",
-                "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/sale-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/sale-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/6-6-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/6-6-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1632,15 +1320,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "Calça Prada&nbsp;",
-                "itemDescription": "P,M,G&nbsp;<br><br>",
+                "itemTitle": "SALGUNAMU",
+                "itemDescription": "<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$159,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/sale%20(1)-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/sale-1-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/4-8-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/4-8-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1655,15 +1343,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "Calça Prada&nbsp;",
-                "itemDescription": "P,M,G&nbsp;<br><br>",
+                "itemTitle": "TUART&nbsp;",
+                "itemDescription": "<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$159,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/sale%20(2)-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/sale-2-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/7-6-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/7-6-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1678,15 +1366,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "Calça Prada&nbsp;",
-                "itemDescription": "P,M,G&nbsp;<br><br>",
+                "itemTitle": "TUART",
+                "itemDescription": "<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$159,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/22-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/22-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/8-1-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/8-1-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1701,15 +1389,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "PRÉ - VENDA&nbsp;",
-                "itemDescription": "<p>Blusa &nbsp;</p><p><br></p><p>P,M,G&nbsp;</p><p><br></p><p>Pedido sob encomenda&nbsp;<br><br></p>",
+                "itemTitle": "TUART&nbsp;",
+                "itemDescription": "<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$139,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/21-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/21-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/9-2-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/9-2-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1724,15 +1412,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "PRÉ-VENDA&nbsp;",
-                "itemDescription": "<p>Vestido&nbsp;</p><p><br></p><p>P,M,G&nbsp;<br><br></p><p>Pedido sob encomenda</p>",
+                "itemTitle": "LE BLOG &nbsp;",
+                "itemDescription": "<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$269,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/20-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/20-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/10-2-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/10-2-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1747,15 +1435,15 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "PRÉ - VENDA",
-                "itemDescription": "<p>&nbsp;Blusa &nbsp;</p><p><br></p><p>P,M,G&nbsp;<br><br></p><p>Pedido sob encomenda</p>",
+                "itemTitle": "LE BLOG &nbsp;",
+                "itemDescription": "<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$139,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/18-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/18-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/11-1-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/11-1-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1770,15 +1458,84 @@
                 "bestSeller": false,
                 "onSale": false,
                 "oldPrice": false,
-                "itemTitle": "PRÉ - VENDA&nbsp;",
-                "itemDescription": "<p>Vestido</p><p><br></p><p>P,M,G&nbsp;<br><br></p><p>Pedido sob encomenda</p>",
+                "itemTitle": "LE BLOG&nbsp;",
+                "itemDescription": "&nbsp;<br><br>",
                 "itemPriceTitle": "From: ",
-                "itemPrice": "R$189,90",
+                "itemPrice": "",
                 "oldPriceValue": "$38",
                 "sale": "SALE",
-                "button": "<a data-app-btn=\"true\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
-                "image": "@PROJECT_PATH@/assets/images/19-800x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/19-800x1000-800x1000.png",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/12-1-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/12-1-800x1000-800x1000.png",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-4",
+                "customStyleTags": "display-4",
+                "caption": "Digite aqui a legenda",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Impressionante",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "BEM ME QUER",
+                "itemDescription": "<br><br>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$38",
+                "sale": "SALE",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/13-2-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/13-2-800x1000-800x1000.png",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-4",
+                "customStyleTags": "display-4",
+                "caption": "Digite aqui a legenda",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Impressionante",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "BEM ME QUER&nbsp;",
+                "itemDescription": "&nbsp;<br><br>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$38",
+                "sale": "SALE",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/14-1-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/14-1-800x1000-800x1000.png",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-4",
+                "customStyleTags": "display-4",
+                "caption": "Digite aqui a legenda",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Impressionante",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "BEM ME QUER &nbsp;",
+                "itemDescription": "<br><br>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$38",
+                "sale": "SALE",
+                "button": "<a data-app-btn=\"true\" href=\"https://manylink.co/@ziromoda\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">ver disponibilidade</a>",
+                "image": "@PROJECT_PATH@/assets/images/15-1-800x1000.png",
+                "thumb": "@PROJECT_PATH@/assets/images/15-1-800x1000-800x1000.png",
                 "customStyle5": "display-5",
                 "customStyle7": "display-7",
                 "customStyleSale": "display-4",
@@ -1792,178 +1549,6 @@
           }
         },
         {
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#767676",
-              "text-align": "left",
-              "line-height": "1.6"
-            },
-            ".image-element": {
-              "position": "relative",
-              "z-index": "0",
-              "overflow": "hidden",
-              "img": {
-                "width": "100%",
-                "height": "100%",
-                "object-fit": "cover",
-                "object-position": "center center"
-              }
-            },
-            ".wrapper": {
-              "padding": "2rem 1rem 1rem 1rem"
-            },
-            ".card-overlay": {
-              "display": "none",
-              "background": "@cardColor"
-            },
-            "@media (min-width: 768px)": {
-              ".image-element": {
-                "&:hover": {
-                  ".card-overlay": {
-                    "opacity": "@cardColorOpacity",
-                    "border-bottom-right-radius": "7rem"
-                  },
-                  ".wrapper": {
-                    "padding-top": "0",
-                    "border-bottom-right-radius": "7rem",
-                    ".collapsed-content": {
-                      "transition": "opacity 0.5s, max-height 3s",
-                      "opacity": "1",
-                      "max-height": "999px",
-                      "border-bottom-right-radius": "7rem",
-                      ".mbr-section-btn": {
-                        "border-bottom-right-radius": "7rem"
-                      }
-                    }
-                  }
-                },
-                "&.popup-btn": {
-                  "&:hover": {
-                    ".card-overlay": {
-                      "border-bottom-right-radius": "0 !important"
-                    },
-                    ".wrapper": {
-                      "border-bottom-right-radius": "0 !important",
-                      ".collapsed-content": {
-                        "border-bottom-right-radius": "0 !important",
-                        ".mbr-section-btn": {
-                          "border-bottom-right-radius": "0 !important"
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              ".wrapper": {
-                "position": "absolute",
-                "bottom": "0",
-                "width": "100%",
-                "padding": "1rem",
-                "background": "transparent",
-                ".collapsed-content": {
-                  "transition": "opacity 0.5s, max-height 1s",
-                  "opacity": "0",
-                  "max-height": "0px",
-                  "overflow": "hidden"
-                }
-              },
-              ".card-overlay": {
-                "transition": "all .5s",
-                "opacity": "0",
-                "display": "block"
-              }
-            },
-            "@media (max-width: 767px)": {
-              ".card-title,.underline,.mbr-text,.mbr-section-btn,.mbr-section-subtitle, .mbr-section-title": {
-                "text-align": "center !important"
-              }
-            },
-            "@media (min-width: 992px)": {},
-            ".mbr-section-title": {
-              "text-align": "left"
-            },
-            ".mbr-section-title,.underline": {
-              "text-align": "center",
-              "color": "#490819"
-            }
-          },
-          "_name": "features9",
-          "_customHTML": "<section class=\"features9 popup-btn-cards\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"mbr-popup-btns\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"3\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>  \n        <select name=\"cards\" title=\"Cards\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected>2</option>\n        </select>\n        <input type=\"color\" title=\"Card Hover\" name=\"cardColor\" value=\"#bbbbbb\">  \n        <input type=\"range\" inline title=\"Card Hover Opacity\" name=\"cardColorOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\">  \n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title,.underline\"><b>EMPÓRIO CLOSET&nbsp;</b></h2>\n        <div class=\"underline align-center\" mbr-if=\"showUnderline && showTitle\">\n            <div class=\"line\"></div>\n        </div>\n        <h3 class=\"mbr-section-subtitle align-center mbr-fonts-style mbr-light \" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n            Cards  with popup text on large displays. In that case to change the <br>image click in on bottom right corner. On medium displays text will be<br> after card. In that case to change the image click on image in any place.\n        </h3>\n        <div class=\"row main justify-content-center\">\n            <div class=\"col-lg-6 p-4\">\n                <div class=\"image-element card-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/1-1-1044x696.png\" alt title>\n                    <div class=\"mbr-overlay card-overlay\"></div>\n                    <div class=\"wrapper\">\n                        <h3 class=\"card-title mbr-fonts-style align-left mbr-white\" mbr-theme-style=\"display-2\"></h3>\n                        <div class=\"collapsed-content\">\n                            <p class=\"mbr-text mbr-white mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\"></p>\n                            <div class=\"mbr-section-btn\" mbr-buttons mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" target=\"_blank\">VER COLEÇÃO&nbsp;</a></div>\n                        </div>\n                   </div>\n               </div>\n            </div>\n            <div class=\"col-lg-6 p-4\" mbr-if=\"cards==2\">\n                <div class=\"image-element card-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/2-1-1044x696.png\" alt title>\n                    <div class=\"mbr-overlay card-overlay\"></div>\n                    <div class=\"wrapper\">\n                        <h3 class=\"card-title mbr-fonts-style align-left mbr-white\" mbr-theme-style=\"display-2\"></h3>\n                        <div class=\"collapsed-content\">\n                            <p class=\"mbr-text mbr-white mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus minima corrupti labore, aliquid est, pariatur natus.\n                            </p>\n                            <div class=\"mbr-section-btn\" mbr-buttons mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" target=\"_blank\">VER COLEÇÃO</a></div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "qInZUFhVFJ",
-          "_anchor": "features9-9",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#767676"
-            },
-            "ul.list-inline": {
-              "margin": "0",
-              "-webkit-align-self": "center",
-              "align-self": "center",
-              "li": {
-                "margin": "0",
-                "padding": ".5rem"
-              },
-              "img": {
-                "max-width": "6rem",
-                "padding-bottom": ".5rem",
-                "& when (@grayFilter)": {
-                  "-webkit-filter": "grayscale(100%)",
-                  "-moz-filter": "grayscale(100%)",
-                  "-ms-filter": "grayscale(100%)",
-                  "-o-filter": "grayscale(100%)",
-                  "filter": "gray"
-                },
-                "&:hover": {
-                  "-webkit-filter": "none",
-                  "-moz-filter": "none",
-                  "-ms-filter": "none",
-                  "-o-filter": "none",
-                  "filter": "none"
-                }
-              }
-            },
-            "@media (max-width: 767px)": {
-              ".list-inline-item img": {
-                "max-width": "5rem"
-              }
-            },
-            ".mbr-section-title": {
-              "color": "#ffffff"
-            }
-          },
-          "_name": "info4",
-          "_customHTML": "<section group=\"Info info4\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\">\n        <input type=\"checkbox\" title=\"Visa\" name=\"showVisa\">\n        <input type=\"checkbox\" title=\"Master Card\" name=\"showMasterCard\">\n        <input type=\"checkbox\" title=\"American Express\" name=\"showAmericanExpress\">\n        <input type=\"checkbox\" title=\"Pay Pal\" name=\"showPayPal\">\n        <input type=\"checkbox\" title=\"Diners Club\" name=\"showDinersClub\">\n        <input type=\"checkbox\" title=\"Discover\" name=\"showDiscover\">\n        <input type=\"checkbox\" title=\"Bitcoin\" name=\"showBitcoin\">\n        <input type=\"checkbox\" title=\"Western Union\" name=\"showWesternUnion\">\n        <input type=\"checkbox\" title=\"JCB\" name=\"showJcb\">\n        <input type=\"checkbox\" title=\"Stripe\" name=\"showStripe\">\n        <input type=\"checkbox\" title=\"Amazon\" name=\"showAmazon\">\n        <input type=\"checkbox\" title=\"Ebay\" name=\"showEbay\">\n        <input type=\"checkbox\" title=\"Union Pay\" name=\"showUnionPay\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background13.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#490819\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#bcc2d8\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style pb-2 mbr-light align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pb-4':!showTitle}\"></h3>\n                <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">20% de desconto à vista nas compras acima de 12 peças&nbsp;</h2>\n            </div>\n\n            <div class=\"col-12 col-md-12\" mbr-class=\"{'pt-4':showTitle}\">\n                <div class=\"row justify-content-center\">\n                    <ul class=\"list-inline align-center\">\n                        <li class=\"list-inline-item\" mbr-if=\"showVisa\">\n                            <img src=\"../_images/payments/visa.png\" alt=\"Visa\">\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showMasterCard\">\n                            <img src=\"@THEME_PATH@/components/_images/payments/master-card.png\" alt=\"Master Card\" title>\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showAmericanExpress\">\n                            <img src=\"@THEME_PATH@/components/_images/payments/american-express.png\" alt=\"American Express\" title>\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showPayPal\">\n                            <img src=\"../_images/payments/paypal.png\" alt=\"Pay Pal\">\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showDinersClub\">\n                            <img src=\"../_images/payments/diners-club.png\" alt=\"Diners Club\">\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showDiscover\">\n                            <img src=\"../_images/payments/discover.png\" alt=\"Discover\">\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showBitcoin\">\n                            <img src=\"../_images/payments/bitcoin.png\" alt=\"Bitcoin\">\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showWesternUnion\">\n                            <img src=\"../_images/payments/western-union.png\" alt=\"Western Union\">\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showJcb\">\n                            <img src=\"../_images/payments/jcb.png\" alt=\"JCB\">\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showStripe\">\n                            <img src=\"../_images/payments/stripe.png\" alt=\"Stripe\">\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showAmazon\">\n                            <img src=\"../_images/payments/amazon.png\" alt=\"Amazon\">\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showEbay\">\n                            <img src=\"../_images/payments/ebay.png\" alt=\"Ebay\">\n                        </li>\n                        <li class=\"list-inline-item\" mbr-if=\"showUnionPay\">\n                            <img src=\"../_images/payments/union-pay.png\" alt=\"Union Pay\">\n                        </li>\n                    \n                    </ul>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "s0HLG484J1",
-          "_anchor": "info4-7",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
           "alias": false,
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
@@ -1978,11 +1563,11 @@
               "color": "#767676"
             },
             ".mbr-section-title": {
-              "color": "#490819"
+              "color": "#000000"
             }
           },
           "_name": "content7",
-          "_customHTML": "<section group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12 align-center\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-fonts-style pb-2\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\"></h3>\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\">Exclusivo nas compras pelo nosso app &nbsp;<br></h2>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12 align-center\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-fonts-style pb-2\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\"></h3>\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\">Fale com o seu assessor &nbsp;&nbsp;<br></h2>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "s0TE81MaFV",
           "_anchor": "content7-a",
           "_protectedParams": [],
@@ -1998,7 +1583,7 @@
             "background-color": "@bgColor"
           },
           "_name": "content11",
-          "_customHTML": "<section class=\"mbr-section content11\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Backgroud Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container-fluid\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-10\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-2\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" target=\"_blank\">COMPRAR&nbsp;</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section content11\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Backgroud Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container-fluid\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-10\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-2\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary\" href=\"https://ziro.app/marcas/closet-deluxe\" data-app-placeholder=\"Type Text\" target=\"_blank\">WhatsApp&nbsp;</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "s1lNmthmta",
           "_anchor": "content11-i",
           "_protectedParams": [],
